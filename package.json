@@ -1,0 +1,11 @@
+{
+  "name": "video-site",
+  "version": "1.0.0",
+  "description": "Youtube Clone",
+  "main": "index.js",
+  "author": "Han Yeonggwan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
