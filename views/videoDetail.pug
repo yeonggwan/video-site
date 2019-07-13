@@ -17,4 +17,12 @@ block content
                 | Uploaded by 
                 a(href=routes.userDetail(video.creator.id))=video.creator.name
         .video__comments
-            span.video__comment-number 댓글 #{video.comments.length} 
+            span.video__comment-number
+                    |댓글 
+                    span#jsCommentNumber=video.comments.length
+            form.add__comment#jsAddComment
+                input(type="text", placeholder="댓글을 작성해주세요")
+            ul.video__comments-list#jsCommentList
+                each comment in video.comments.reverse()
+                    li
+                        span=comment.text
